@@ -1,0 +1,1051 @@
+/* The home page (Claude Design, Home.dc.html). Lifted objects are site.css's .slab/.face: the face
+   moves off its ink floor on hover and lands on it when pressed. motion.js plays the rest. */
+
+.eyebrow {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: var(--text-2);
+  margin-bottom: 8px;
+}
+
+.h2 {
+  font-size: clamp(30px, 3.6vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin: 0 0 32px;
+  text-wrap: balance;
+}
+
+.h2-sm {
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.sec {
+  padding: 96px 0 0;
+}
+
+.yellow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--yellow);
+  color: var(--on-color);
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 var(--ink);
+  font-weight: 700;
+}
+
+.check {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ticks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.ticks li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 48px;
+  align-items: center;
+  padding: 40px 0 24px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 5.4vw, 66px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+
+/* One flap of the flip clock, after the title. */
+.flap {
+  position: relative;
+  display: inline-block;
+  vertical-align: -0.06em;
+  width: 0.92em;
+  height: 1.02em;
+  margin-left: 0.12em;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  font-size: 0.86em;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.flap [data-face] {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.flap .hinge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 1px);
+  height: 2px;
+  background: var(--ink);
+  z-index: 2;
+}
+
+.lede {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-2);
+  margin: 0 0 28px;
+  max-width: 34em;
+  text-wrap: pretty;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--yellow);
+  color: var(--on-color);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--ink);
+  font-weight: 700;
+  padding: 8px 16px;
+}
+
+/* The boarding pass (the app's src/components/boarding-pass.tsx). */
+.pass-wrap {
+  --r: 14px;
+  --o: 6px;
+  max-width: 440px;
+  width: 100%;
+  justify-self: center;
+}
+
+.pass {
+  overflow: hidden;
+  border-width: 2.5px;
+}
+
+.pass-head {
+  position: relative;
+  background: var(--yellow);
+  color: var(--on-color);
+  padding: 18px 18px 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.pass-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.pass-top .plane {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.pass-city {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+}
+
+.pass-dates {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.stamp {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border: 3px solid #171717;
+  border-radius: 8px;
+  transform: rotate(-10deg);
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.pass-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 14px 18px 6px;
+}
+
+.stat {
+  display: grid;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  color: var(--text-2);
+}
+
+.stat-value {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.pass-budget {
+  display: grid;
+  gap: 7px;
+  padding: 10px 18px 4px;
+}
+
+.pass-spent {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.pass-spent .rest {
+  color: var(--text-2);
+}
+
+.pass-bar {
+  height: 14px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.pass-bar div {
+  transform-origin: 0 50%;
+  width: 36%;
+  height: 100%;
+  background: var(--green);
+  border-right: 2px solid var(--ink);
+}
+
+.pass-actions {
+  display: flex;
+  gap: 10px;
+  padding: 12px 18px 18px;
+}
+
+.pass-actions > span {
+  flex: 1;
+  min-height: 44px;
+  font-size: 15px;
+}
+
+.pass-actions .ghost {
+  background: var(--card);
+  color: var(--text);
+}
+
+/* The app's screens */
+
+.screens-sec {
+  padding: 88px 0 0;
+}
+
+.screens-sec .h2 {
+  max-width: 20em;
+}
+
+.screens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 24px;
+}
+
+.screens figure {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.phone {
+  --r: 34px;
+  width: 100%;
+  max-width: 210px;
+  aspect-ratio: 9 / 19.5;
+}
+
+.phone .face {
+  border-width: 2.5px;
+  padding: 7px;
+}
+
+.screen {
+  position: relative;
+  height: 100%;
+  border-radius: 27px;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  background: repeating-linear-gradient(135deg, var(--stripe) 0 10px, var(--stripe-alt) 10px 20px);
+}
+
+.screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.island {
+  position: absolute;
+  top: 8px;
+  left: 33%;
+  width: 34%;
+  height: 18px;
+  background: #171717;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.screens figcaption {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Phones: two screens a row instead of one, so the section isn't five screens tall. */
+@media (max-width: 640px) {
+  .screens {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+  }
+}
+
+/* Features */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features .face {
+  padding: 22px;
+  transition: transform 180ms var(--travel);
+}
+
+.features .face:hover {
+  transform: translate(-2px, -2px);
+}
+
+.features .face:active {
+  transform: translate(4px, 4px);
+}
+
+.tile {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.features h3 {
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 14px 0 6px;
+}
+
+.features p {
+  margin: 0;
+  color: var(--text-2);
+  text-wrap: pretty;
+}
+
+/* Quick log demo and itinerary */
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 28px;
+}
+
+.pair > div {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.budget .face {
+  padding: 22px;
+  display: grid;
+  gap: 22px;
+}
+
+.quick {
+  display: flex;
+  gap: 10px;
+}
+
+.field {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: var(--paper);
+  font-weight: 700;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.caret {
+  width: 2px;
+  height: 22px;
+  background: var(--ink);
+  margin-left: 2px;
+}
+
+.quick .yellow-btn {
+  padding: 0 16px;
+  min-height: 48px;
+}
+
+.left-today {
+  display: grid;
+  gap: 8px;
+}
+
+.left-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.left-row .eyebrow {
+  margin: 0;
+}
+
+.left-value {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-bar {
+  position: relative;
+}
+
+.budget-bar [data-bar] {
+  height: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.budget-bar [data-fill] {
+  width: 100%;
+  height: 100%;
+  background: var(--green);
+  transform-origin: 0 50%;
+  transform: scaleX(0.375);
+}
+
+.coin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--yellow);
+  border: 2px solid #171717;
+  color: #171717;
+  font-size: 12px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.route .face {
+  padding: 18px 22px 20px;
+}
+
+.arc {
+  position: relative;
+}
+
+.arc svg {
+  display: block;
+  overflow: visible;
+}
+
+.arc .flight {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: var(--yellow);
+  color: #171717;
+  border: 2px solid #171717;
+  border-radius: 8px;
+  font-size: 18px;
+  opacity: 0;
+}
+
+.cities {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.cities span {
+  padding: 3px 8px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--card);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cities [data-dest] {
+  background: var(--pink);
+  color: #171717;
+}
+
+.stops {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+}
+
+.stops li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 2px solid var(--muted);
+}
+
+.stops .n {
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex: none;
+}
+
+.stops .name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.stops .cost {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Souvenirs: folders (the app's src/components/ui/folder-card.tsx) */
+
+.souvenirs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.souvenirs .h2 {
+  margin-bottom: 14px;
+}
+
+.souvenirs p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 18px;
+  max-width: 28em;
+  text-wrap: pretty;
+}
+
+.folders {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 24px;
+}
+
+.folder {
+  position: relative;
+  transition: transform 300ms var(--travel);
+}
+
+.folder:hover {
+  transform: translateY(-10px);
+}
+
+.folder-floor {
+  position: absolute;
+  inset: 0;
+  transform: translate(4px, 4px);
+  pointer-events: none;
+}
+
+.folder-floor::before,
+.folder-floor::after {
+  content: '';
+  position: absolute;
+  background: var(--ink);
+}
+
+.folder-floor::before {
+  top: 0;
+  left: 10px;
+  width: 52%;
+  height: 26px;
+  border-radius: 9px 9px 0 0;
+}
+
+.folder-floor::after {
+  top: 14px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px 12px 12px 12px;
+}
+
+.folder-tab {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 52%;
+  height: 26px;
+  border: 2.5px solid var(--ink);
+  border-radius: 9px 9px 0 0;
+}
+
+.folder-photo {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  right: 14px;
+  height: 56px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: repeating-linear-gradient(135deg, var(--stripe) 0 7px, var(--stripe-alt) 7px 14px);
+  transform: translateY(-26px) rotate(-3deg);
+}
+
+.folder-body {
+  position: relative;
+  margin-top: 14px;
+  min-height: 150px;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: 4px 12px 12px 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.folder-code {
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  color: #171717;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.folder-body .spacer {
+  flex: 1;
+}
+
+.folder-name {
+  display: grid;
+  gap: 2px;
+}
+
+.folder-name strong {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.4px;
+}
+
+.folder-name > span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+/* Free and Premium */
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.free .face {
+  padding: 26px;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.price {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.price small {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.plan-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.free .plan-name {
+  color: var(--text-2);
+}
+
+.premium {
+  --o: 6px;
+}
+
+.premium .face {
+  border-width: 2.5px;
+  overflow: visible;
+}
+
+.premium-head {
+  background: var(--yellow);
+  color: var(--on-color);
+  padding: 22px 26px;
+  border-radius: 13px 13px 0 0;
+  border-bottom: 2.5px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.yearly {
+  border: 2px solid #171717;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+  background: #ffffff;
+}
+
+.yearly .trial {
+  font-weight: 500;
+}
+
+.premium .ticks {
+  padding: 24px 26px 26px;
+}
+
+.premium .check {
+  background: var(--green);
+  color: #171717;
+}
+
+.plans-note {
+  margin: 22px 0 0;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+/* Your data */
+
+.data {
+  background: var(--muted);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 28px;
+}
+
+.data h2 {
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 14px;
+}
+
+.data > div > a {
+  font-weight: 700;
+}
+
+.point {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.point .num {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  color: #171717;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.point strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.point > span:last-child {
+  color: var(--text-2);
+  text-wrap: pretty;
+}
+
+/* The end ticket: the stub tears off */
+
+.board {
+  padding: 104px 0 0;
+}
+
+.ticket {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ticket-main {
+  --o: 6px;
+  --r: 16px 0 0 16px;
+  flex: 1 1 460px;
+}
+
+.ticket-main .face {
+  background: var(--blue);
+  color: #ffffff;
+  border-width: 2.5px;
+  border-right: 0;
+  padding: 34px 34px 36px;
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.ticket-main .plan-name {
+  letter-spacing: 1.4px;
+}
+
+.ticket-title {
+  font-size: clamp(34px, 4.4vw, 54px);
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.ticket-sub {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 26em;
+}
+
+.stub {
+  --o: 6px;
+  --r: 0 16px 16px 0;
+  flex: 0 1 330px;
+  transform-origin: 100% 0;
+}
+
+.stub .face {
+  border-width: 2.5px;
+  border-left: 2.5px dashed var(--ink);
+  padding: 30px 28px;
+  display: grid;
+  gap: 16px;
+  align-content: center;
+}
+
+.stub .plan-name {
+  color: var(--text-2);
+}
+
+.gate {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.stores {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stores > span {
+  display: grid;
+  place-items: center;
+  width: 136px;
+  height: 46px;
+  border: 2px dashed var(--ink);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.stores small {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.stub .notch {
+  left: -12px;
+}
+
+.stub .notch-b {
+  top: auto;
+  bottom: -13px;
+}
+
+.notch-main {
+  display: none;
+}
+
+/* Narrow screens: the stub goes under the ticket, torn along a horizontal perforation. The punched
+   holes stay on the ticket, so the torn stub never pushes one past the screen's edge. */
+@media (max-width: 837px) {
+  .ticket-main {
+    --r: 16px 16px 0 0;
+    flex-basis: 100%;
+  }
+
+  .ticket-main .face {
+    border-right: 2.5px solid var(--ink);
+    border-bottom: 0;
+    padding: 28px 24px;
+  }
+
+  .stub {
+    --r: 0 0 16px 16px;
+    flex: 1 1 100%;
+  }
+
+  .stub .face {
+    border-left: 2.5px solid var(--ink);
+    border-top: 2.5px dashed var(--ink);
+    padding: 24px;
+  }
+
+  .stub .notch {
+    display: none;
+  }
+
+  .notch-main {
+    display: block;
+    top: auto;
+    bottom: -13px;
+    z-index: 2;
+  }
+
+  .notch-ml {
+    left: -12px;
+  }
+
+  .notch-mr {
+    right: -12px;
+  }
+}

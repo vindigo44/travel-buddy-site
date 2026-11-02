@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" class="no-js" data-lang="en" data-title-en="Travel Buddy — your trip budget, in every currency" data-title-fr="Travel Buddy — le budget de votre voyage, dans toutes les devises">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Buddy — your trip budget, in every currency</title>
+    <meta name="description" content="Travel Buddy, the trip budget app: your expenses in every currency, what's left each day, your itinerary and the souvenirs of every country. No account needed." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Travel Buddy" />
+    <meta property="og:description" content="Your trip budget, in every currency. Expenses, what's left each day, itinerary and souvenirs — no account needed." />
+    <meta property="og:url" content="https://vindigo44.github.io/travel-buddy-site/" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preload" href="assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/home.css" />
+    <script src="assets/prefs.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./"><img src="assets/icon-256.png" alt="" /><span>Travel Buddy</span></a>
+        <nav class="nav" aria-label="Site">
+          <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+          <a href="privacy.html"><span lang="en">Privacy</span><span lang="fr">Confidentialité</span></a>
+          <a href="terms.html"><span lang="en">Terms</span><span lang="fr">Conditions</span></a>
+        </nav>
+        <div class="switches">
+          <span class="switch switch-lang" role="group" aria-label="Language / Langue">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+          </span>
+          <span class="switch switch-theme" role="group" aria-label="Theme / Thème">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-theme="light" aria-pressed="true"><span lang="en">Light</span><span lang="fr">Clair</span></button>
+            <button type="button" data-set-theme="dark" aria-pressed="false"><span lang="en">Dark</span><span lang="fr">Sombre</span></button>
+          </span>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero -->
+        <section class="hero">
+          <div>
+            <h1>
+              <span lang="fr">Le budget de votre voyage, dans toutes les devises</span><span lang="en">Your trip budget, in every currency</span>
+              <span class="flap" data-m="flip" data-seq="€,¥,$,฿" data-d="900" aria-hidden="true"><span data-face>฿</span><span class="hinge"></span></span>
+            </h1>
+            <p class="lede">
+              <span lang="fr">Notez vos dépenses dans n'importe quelle devise, voyez ce qu'il vous reste pour chaque jour, préparez votre itinéraire et gardez les souvenirs de chaque pays. Tout reste sur votre téléphone, sans compte.</span>
+              <span lang="en">Log what you spend in any currency, see what's left for each day, plan your itinerary and keep the souvenirs of every country. Everything stays on your phone — no account needed.</span>
+            </p>
+            <span class="pill"><span lang="fr">Bientôt sur l'App Store et Google Play</span><span lang="en">Coming soon to the App Store and Google Play</span></span>
+          </div>
+
+          <!-- The app's boarding pass (src/components/boarding-pass.tsx) -->
+          <div class="slab pass-wrap" data-m="drop" data-d="120" aria-hidden="true">
+            <div class="face pass" data-blow>
+              <div class="pass-head">
+                <div class="pass-top">
+                  <span><span lang="fr">EN VOYAGE</span><span lang="en">ON THE ROAD</span></span>
+                  <span class="plane">✈︎</span>
+                </div>
+                <div class="pass-city"><span lang="fr">TOKYO, JAPON</span><span lang="en">TOKYO, JAPAN</span></div>
+                <div class="pass-dates"><span lang="fr">12 – 26 avril</span><span lang="en">12 – 26 April</span></div>
+                <div class="stamp" data-m="slam" data-d="820"><span>✈︎</span><span lang="fr">EMBARQUÉ</span><span lang="en">DEPARTED</span></div>
+              </div>
+              <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+              <div class="pass-stats">
+                <div class="stat">
+                  <span class="stat-label"><span lang="fr">COMPTEUR</span><span lang="en">COUNTDOWN</span></span>
+                  <span class="stat-value"><span lang="fr">Jour 3</span><span lang="en">Day 3</span></span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label"><span lang="fr">VOYAGEURS</span><span lang="en">TRAVELERS</span></span>
+                  <span class="stat-value">2</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">BUDGET</span>
+                  <span class="stat-value"><span lang="fr">2 400 €</span><span lang="en">€2,400</span></span>
+                </div>
+              </div>
+              <div class="pass-budget">
+                <div class="pass-spent">
+                  <span><span lang="fr">860 € dépensés</span><span lang="en">€860 spent</span></span>
+                  <span class="rest"><span lang="fr">36 % utilisé · 1 540 € restant</span><span lang="en">36% used · €1,540 left</span></span>
+                </div>
+                <div class="pass-bar"><div data-m="rise" data-kf="grow" data-d="680" data-ms="560"></div></div>
+              </div>
+              <div class="pass-actions">
+                <span class="yellow-btn"><span lang="fr">Itinéraire</span><span lang="en">Itinerary</span></span>
+                <span class="yellow-btn ghost"><span lang="fr">Détails du voyage</span><span lang="en">Trip details</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Screens -->
+        <section class="screens-sec">
+          <div class="eyebrow"><span lang="fr">L'APP</span><span lang="en">THE APP</span></div>
+          <h2 class="h2"><span lang="fr">Tout le voyage, sur un billet.</span><span lang="en">The whole trip, on one ticket.</span></h2>
+          <div class="screens">
+            <figure data-m="rise" data-when="view" data-d="0">
+              <div class="slab phone"><div class="face"><div class="screen"><img src="assets/screens/home.jpg" width="420" height="913" alt="" loading="lazy" /><div class="island" aria-hidden="true"></div></div></div></div>
+              <figcaption><span lang="fr">Accueil et carte d'embarquement</span><span lang="en">Home and boarding pass</span></figcaption>
+            </figure>
+            <figure data-m="rise" data-when="view" data-d="60">
+              <div class="slab phone"><div class="face"><div class="screen"><img src="assets/screens/expense.jpg" width="420" height="913" alt="" loading="lazy" /><div class="island" aria-hidden="true"></div></div></div></div>
+              <figcaption><span lang="fr">Une dépense</span><span lang="en">An expense</span></figcaption>
+            </figure>
+            <figure data-m="rise" data-when="view" data-d="120">
+              <div class="slab phone"><div class="face"><div class="screen"><img src="assets/screens/trips-map.jpg" width="420" height="913" alt="" loading="lazy" /><div class="island" aria-hidden="true"></div></div></div></div>
+              <figcaption><span lang="fr">Vos voyages</span><span lang="en">Your trips</span></figcaption>
+            </figure>
+            <figure data-m="rise" data-when="view" data-d="180">
+              <div class="slab phone"><div class="face"><div class="screen"><img src="assets/screens/album.jpg" width="420" height="913" alt="" loading="lazy" /><div class="island" aria-hidden="true"></div></div></div></div>
+              <figcaption><span lang="fr">Album souvenirs</span><span lang="en">Souvenir album</span></figcaption>
+            </figure>
+            <figure data-m="rise" data-when="view" data-d="240">
+              <div class="slab phone"><div class="face"><div class="screen"><img src="assets/screens/widgets.jpg" width="420" height="913" alt="" loading="lazy" /><div class="island" aria-hidden="true"></div></div></div></div>
+              <figcaption>Widgets</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section class="sec">
+          <div class="eyebrow"><span lang="fr">FONCTIONNALITÉS</span><span lang="en">FEATURES</span></div>
+          <h2 class="h2"><span lang="fr">Ce qui voyage avec vous</span><span lang="en">What travels with you</span></h2>
+          <ul class="features">
+            <li class="slab" data-m="rise" data-when="view" data-d="0">
+              <div class="face">
+                <span class="tile yellow" aria-hidden="true">💱</span>
+                <h3><span lang="fr">Toutes les devises</span><span lang="en">Every currency</span></h3>
+                <p><span lang="fr">Plus de 150 devises, avec les taux du marché remplis pour vous, même hors ligne. Ou tapez votre propre taux.</span><span lang="en">More than 150 currencies with market exchange rates filled in for you, even offline. Or type your own rate.</span></p>
+              </div>
+            </li>
+            <li class="slab" data-m="rise" data-when="view" data-d="60">
+              <div class="face">
+                <span class="tile green" aria-hidden="true">📊</span>
+                <h3><span lang="fr">Ce qu'il reste, chaque jour</span><span lang="en">What's left, each day</span></h3>
+                <p><span lang="fr">Votre budget transformé en enveloppe quotidienne, les dépenses par catégorie, et une saisie rapide sur l'accueil.</span><span lang="en">Your budget turned into a daily allowance, spending by category, and a quick log on the home screen.</span></p>
+              </div>
+            </li>
+            <li class="slab" data-m="rise" data-when="view" data-d="120">
+              <div class="face">
+                <span class="tile blue" aria-hidden="true">🗺️</span>
+                <h3><span lang="fr">Itinéraire et checklist</span><span lang="en">Itinerary and checklist</span></h3>
+                <p><span lang="fr">Les étapes de chaque jour et leur coût, l'itinéraire dans Plans, la liste de ce qu'il faut emporter.</span><span lang="en">Plan each day's stops and their cost, open directions in Maps, tick off what to pack.</span></p>
+              </div>
+            </li>
+            <li class="slab" data-m="rise" data-when="view" data-d="180">
+              <div class="face">
+                <span class="tile pink" aria-hidden="true">📸</span>
+                <h3><span lang="fr">Des souvenirs par pays</span><span lang="en">Souvenirs by country</span></h3>
+                <p><span lang="fr">Un album photo pour chaque pays visité, et la carte de tous vos voyages à partager.</span><span lang="en">A photo album for every country you visit, and a map of all your trips to share.</span></p>
+              </div>
+            </li>
+            <li class="slab" data-m="rise" data-when="view" data-d="240">
+              <div class="face">
+                <span class="tile orange" aria-hidden="true">⏱️</span>
+                <h3><span lang="fr">Des widgets sur iPhone</span><span lang="en">Widgets on iPhone</span></h3>
+                <p><span lang="fr">Le budget restant, l'ajout rapide, le taux de change et une horloge à volets avec l'heure d'ici et de là-bas.</span><span lang="en">Budget left, quick add, exchange rate and a flip clock with home and destination time.</span></p>
+              </div>
+            </li>
+            <li class="slab" data-m="rise" data-when="view" data-d="300">
+              <div class="face">
+                <span class="tile yellow" aria-hidden="true">🔒</span>
+                <h3><span lang="fr">Privé par principe</span><span lang="en">Private by design</span></h3>
+                <p><span lang="fr">Ni pub ni pistage. Un compte facultatif sauvegarde vos voyages ; les photos ne quittent jamais le téléphone.</span><span lang="en">No ads, no tracking. An optional account backs up your trips; photos never leave the phone.</span></p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Quick log demo + itinerary -->
+        <section class="sec pair">
+          <div>
+            <div>
+              <div class="eyebrow"><span lang="fr">AJOUT RAPIDE</span><span lang="en">QUICK LOG</span></div>
+              <h2 class="h2-sm"><span lang="fr">Une dépense, et le reste se recalcule.</span><span lang="en">One expense, and the rest adds up.</span></h2>
+            </div>
+            <div class="slab budget" data-m="budget" data-when="view" data-from="42" data-to="37.5" data-total="60">
+              <div class="face">
+                <div class="quick">
+                  <div class="field"><span data-type lang="fr">Café 4,50 €</span><span data-type lang="en">Coffee €4.50</span><span class="caret" aria-hidden="true"></span></div>
+                  <span class="yellow-btn"><span lang="fr">Ajouter</span><span lang="en">Add</span></span>
+                </div>
+                <div class="left-today">
+                  <div class="left-row">
+                    <span class="eyebrow"><span lang="fr">RESTE AUJOURD'HUI</span><span lang="en">LEFT TODAY</span></span>
+                    <span class="left-value"><span data-left lang="fr">37,50 €</span><span data-left lang="en">€37.50</span></span>
+                  </div>
+                  <div class="budget-bar">
+                    <div data-bar><div data-fill></div></div>
+                  </div>
+                </div>
+                <span class="coin" data-coin aria-hidden="true">€</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div class="eyebrow"><span lang="fr">ITINÉRAIRE</span><span lang="en">ITINERARY</span></div>
+              <h2 class="h2-sm"><span lang="fr">Chaque étape, et ce qu'elle coûte.</span><span lang="en">Every stop, and what it costs.</span></h2>
+            </div>
+            <div class="slab route">
+              <div class="face">
+                <div class="arc" data-m="arc" data-when="view" role="img" aria-label="Paris → Tokyo">
+                  <svg viewBox="0 0 480 170" width="100%">
+                    <defs><mask id="tb-route"><path data-mask d="M 40 140 Q 240 -20 440 118" fill="none" stroke="#fff" stroke-width="10"></path></mask></defs>
+                    <path data-route d="M 40 140 Q 240 -20 440 118" fill="none" stroke-width="2.5" stroke-dasharray="7 6" stroke-linecap="round" mask="url(#tb-route)" style="stroke: var(--ink)"></path>
+                    <circle cx="40" cy="140" r="6" style="fill: var(--ink)"></circle>
+                    <circle cx="440" cy="118" r="6" style="fill: var(--ink)"></circle>
+                  </svg>
+                  <span class="flight" data-plane aria-hidden="true">✈︎</span>
+                  <div class="cities"><span>PARIS</span><span data-dest>TOKYO</span></div>
+                </div>
+                <ul class="stops">
+                  <li><span class="n">1</span><span class="name"><span lang="fr">Sanctuaire Meiji</span><span lang="en">Meiji Shrine</span></span><span class="cost"><span lang="fr">0 €</span><span lang="en">€0</span></span></li>
+                  <li><span class="n">2</span><span class="name"><span lang="fr">Marché de Tsukiji</span><span lang="en">Tsukiji Market</span></span><span class="cost"><span lang="fr">24 €</span><span lang="en">€24</span></span></li>
+                  <li><span class="n">3</span><span class="name">teamLab Planets</span><span class="cost"><span lang="fr">38 €</span><span lang="en">€38</span></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Souvenirs: folders (src/components/ui/folder-card.tsx) -->
+        <section class="sec souvenirs">
+          <div>
+            <div class="eyebrow">SOUVENIRS</div>
+            <h2 class="h2"><span lang="fr">Un dossier par pays.</span><span lang="en">A folder for every country.</span></h2>
+            <p><span lang="fr">Les photos de chaque voyage, rangées par pays, et la carte de tous vos voyages à partager. Les photos restent sur votre téléphone.</span><span lang="en">Each trip's photos, sorted by country, and a map of all your trips to share. Photos stay on your phone.</span></p>
+          </div>
+          <div class="folders" data-m="folders" data-when="view" aria-hidden="true">
+            <div class="folder" data-folder>
+              <div class="folder-floor"></div>
+              <div class="folder-tab pink"></div>
+              <div class="folder-photo" data-photo></div>
+              <div class="folder-body">
+                <span class="folder-code pink">JP</span>
+                <div class="spacer"></div>
+                <div class="folder-name"><strong><span lang="fr">Japon</span><span lang="en">Japan</span></strong><span>12 photos</span></div>
+              </div>
+            </div>
+            <div class="folder" data-folder>
+              <div class="folder-floor"></div>
+              <div class="folder-tab green"></div>
+              <div class="folder-photo" data-photo></div>
+              <div class="folder-body">
+                <span class="folder-code green">PT</span>
+                <div class="spacer"></div>
+                <div class="folder-name"><strong>Portugal</strong><span>7 photos</span></div>
+              </div>
+            </div>
+            <div class="folder" data-folder>
+              <div class="folder-floor"></div>
+              <div class="folder-tab orange"></div>
+              <div class="folder-photo" data-photo></div>
+              <div class="folder-body">
+                <span class="folder-code orange">MX</span>
+                <div class="spacer"></div>
+                <div class="folder-name"><strong><span lang="fr">Mexique</span><span lang="en">Mexico</span></strong><span>9 photos</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Free and Premium -->
+        <section class="sec">
+          <div class="eyebrow"><span lang="fr">GRATUIT ET PREMIUM</span><span lang="en">FREE AND PREMIUM</span></div>
+          <h2 class="h2"><span lang="fr">Un voyage offert. Les suivants avec Premium.</span><span lang="en">One trip on us. The next ones with Premium.</span></h2>
+          <div class="plans">
+            <div class="slab free">
+              <div class="face">
+                <div>
+                  <div class="plan-name"><span lang="fr">GRATUIT</span><span lang="en">FREE</span></div>
+                  <div class="price"><span lang="fr">0 €</span><span lang="en">€0</span></div>
+                </div>
+                <ul class="ticks">
+                  <li><span class="check" aria-hidden="true">✓</span><span><span lang="fr">1 voyage, avec tout ce qu'il contient</span><span lang="en">1 trip, with everything in it</span></span></li>
+                  <li><span class="check" aria-hidden="true">✓</span><span><span lang="fr">Photos souvenirs illimitées</span><span lang="en">Unlimited souvenir photos</span></span></li>
+                  <li><span class="check" aria-hidden="true">✓</span><span><span lang="fr">Budget, devises, itinéraire, checklist, widgets, exports et sauvegarde inclus</span><span lang="en">Budget, currencies, itinerary, checklist, widgets, exports and backup included</span></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slab premium">
+              <div class="face" data-m="perks" data-when="view">
+                <div class="premium-head">
+                  <div>
+                    <div class="plan-name">PREMIUM</div>
+                    <div class="price"><span lang="fr">2,99 €<small>/mois</small></span><span lang="en">€2.99<small>/month</small></span></div>
+                  </div>
+                  <div class="yearly"><span lang="fr">ou 19,99 €/an<br /><span class="trial">7 jours d'essai gratuit</span><br />ou 34,99 € à vie</span><span lang="en">or €19.99/year<br /><span class="trial">7-day free trial</span><br />or €34.99 for life</span></div>
+                </div>
+                <ul class="ticks">
+                  <li data-perk><span class="check" data-check aria-hidden="true">✓</span><span><span lang="fr">Voyages illimités</span><span lang="en">Unlimited trips</span></span></li>
+                  <li data-perk><span class="check" data-check aria-hidden="true">✓</span><span><span lang="fr">Voyages partagés avec vos compagnons (gratuit pour eux)</span><span lang="en">Shared trips with your companions (free for them)</span></span></li>
+                  <li data-perk><span class="check" data-check aria-hidden="true">✓</span><span><span lang="fr">Import de sauvegardes contenant plusieurs voyages</span><span lang="en">Import backups holding several trips</span></span></li>
+                  <li data-perk><span class="check" data-check aria-hidden="true">✓</span><span><span lang="fr">Sans compte, comme la version gratuite</span><span lang="en">No account needed, like the free version</span></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="plans-note">
+            <span lang="fr">Paiement via Apple ou Google, résiliable à tout moment. Si Premium s'arrête, rien n'est supprimé. <a href="terms.html">Conditions de l'abonnement</a></span>
+            <span lang="en">Paid through Apple or Google, cancel anytime. If Premium ends, nothing is deleted. <a href="terms.html">Subscription terms</a></span>
+          </p>
+        </section>
+
+        <!-- Your data -->
+        <section class="sec">
+          <div class="data">
+            <div>
+              <div class="eyebrow"><span lang="fr">VOS DONNÉES</span><span lang="en">YOUR DATA</span></div>
+              <h2><span lang="fr">Privé par principe.</span><span lang="en">Private by design.</span></h2>
+              <a href="privacy.html"><span lang="fr">Lire la politique de confidentialité</span><span lang="en">Read the privacy policy</span></a>
+            </div>
+            <div class="point">
+              <span class="num yellow" aria-hidden="true">1</span>
+              <strong><span lang="fr">Sans compte, rien ne quitte le téléphone</span><span lang="en">Without an account, nothing leaves your phone</span></strong>
+              <span><span lang="fr">Voyages, dépenses et photos restent sur votre appareil.</span><span lang="en">Trips, expenses and photos stay on your device.</span></span>
+            </div>
+            <div class="point">
+              <span class="num green" aria-hidden="true">2</span>
+              <strong><span lang="fr">Un compte facultatif, dans l'UE</span><span lang="en">An optional account, in the EU</span></strong>
+              <span><span lang="fr">Il sauvegarde vos voyages à Paris. Jamais les photos.</span><span lang="en">It backs up your trips in Paris. Never the photos.</span></span>
+            </div>
+            <div class="point">
+              <span class="num pink" aria-hidden="true">3</span>
+              <strong><span lang="fr">Ni pub ni pistage</span><span lang="en">No ads, no tracking</span></strong>
+              <span><span lang="fr">Aucune statistique, rien n'est vendu ni partagé.</span><span lang="en">No analytics; nothing is sold or shared.</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- End ticket: the stub tears off -->
+        <section class="board">
+          <div class="ticket" data-m="tear" data-when="view">
+            <div class="slab ticket-main">
+              <div class="face">
+                <div class="plan-name"><span lang="fr">CARTE D'EMBARQUEMENT · TRAVEL BUDDY</span><span lang="en">BOARDING PASS · TRAVEL BUDDY</span></div>
+                <div class="ticket-title"><span lang="fr">Prêt à embarquer ?</span><span lang="en">Ready to board?</span></div>
+                <div class="ticket-sub"><span lang="fr">Travel Buddy arrive sur iPhone et Android. Gratuit pour votre prochain voyage.</span><span lang="en">Travel Buddy is coming to iPhone and Android. Free for your next trip.</span></div>
+              </div>
+              <div class="notch notch-main notch-ml" aria-hidden="true"></div>
+              <div class="notch notch-main notch-mr" aria-hidden="true"></div>
+            </div>
+            <div class="slab stub" data-stub>
+              <div class="face">
+                <div class="plan-name"><span lang="fr">PORTE</span><span lang="en">GATE</span></div>
+                <div class="gate"><span lang="fr">Bientôt sur l'App Store et Google Play</span><span lang="en">Coming soon to the App Store and Google Play</span></div>
+                <div class="stores">
+                  <span>App Store<br /><small><span lang="fr">bientôt</span><span lang="en">soon</span></small></span>
+                  <span>Google Play<br /><small><span lang="fr">bientôt</span><span lang="en">soon</span></small></span>
+                </div>
+              </div>
+              <div class="notch" aria-hidden="true"></div>
+              <div class="notch notch-b" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="foot">
+        <span>© 2026 Travel Buddy</span>
+        <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+        <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="fr">Confidentialité</span></a>
+        <a href="terms.html"><span lang="en">Terms of use</span><span lang="fr">Conditions</span></a>
+        <a href="delete-account.html"><span lang="en">Delete my account</span><span lang="fr">Supprimer mon compte</span></a>
+        <a class="mail" href="mailto:travelbuddystudio@gmail.com">travelbuddystudio@gmail.com</a>
+      </footer>
+    </div>
+    <script src="assets/motion.js"></script>
+  </body>
+</html>

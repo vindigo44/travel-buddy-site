@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" class="no-js" data-lang="en" data-title-en="Travel Buddy" data-title-fr="Travel Buddy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Buddy</title>
+    <meta name="description" content="Travel Buddy: what happened to the link you opened." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/ticket.css" />
+    <script src="assets/prefs.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./"><img src="assets/icon-256.png" alt="" /><span>Travel Buddy</span></a>
+        <nav class="nav" aria-label="Site">
+          <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+          <a href="privacy.html"><span lang="en">Privacy</span><span lang="fr">Confidentialité</span></a>
+          <a href="terms.html"><span lang="en">Terms</span><span lang="fr">Conditions</span></a>
+        </nav>
+        <div class="switches">
+          <span class="switch switch-lang" role="group" aria-label="Language / Langue">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+          </span>
+          <span class="switch switch-theme" role="group" aria-label="Theme / Thème">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-theme="light" aria-pressed="true"><span lang="en">Light</span><span lang="fr">Clair</span></button>
+            <button type="button" data-set-theme="dark" aria-pressed="false"><span lang="en">Dark</span><span lang="fr">Sombre</span></button>
+          </span>
+        </div>
+      </header>
+
+      <main class="ticket-page">
+        <div class="slab ticket-card" data-view="confirmed" data-m="drop" hidden>
+          <div class="face" data-blow>
+            <div class="ticket-head green">
+              <div class="kicker"><span lang="fr">E-MAIL CONFIRMÉ</span><span lang="en">EMAIL CONFIRMED</span></div>
+              <div class="ticket-title"><span lang="fr">C’est bon, votre e-mail est confirmé.</span><span lang="en">All set, your email is confirmed.</span></div>
+              <div class="stamp" data-m="slam" data-d="700"><span lang="fr">VALIDÉ</span><span lang="en">CONFIRMED</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Revenez dans Travel Buddy. Si l’app ne vous a pas connecté d’elle-même, connectez-vous avec cette adresse.</span><span lang="en">Go back to Travel Buddy. If the app didn’t sign you in by itself, sign in with this address.</span></p>
+              <p class="hint"><span lang="fr">Si l’app ne s’est pas ouverte, ouvrez-la vous-même.</span><span lang="en">If the app didn’t open, open it yourself.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card" data-view="expired" data-m="drop" hidden>
+          <div class="face" data-blow>
+            <div class="ticket-head orange">
+              <div class="kicker"><span lang="fr">LIEN EXPIRÉ</span><span lang="en">LINK EXPIRED</span></div>
+              <div class="ticket-title"><span lang="fr">Ce lien a expiré ou a déjà servi.</span><span lang="en">This link has expired or was already used.</span></div>
+              <div class="stamp" data-m="slam" data-d="700"><span lang="fr">PÉRIMÉ</span><span lang="en">EXPIRED</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Un lien ne sert qu’une fois. Dans l’app, touchez « Renvoyer l’e-mail » pour en recevoir un nouveau.</span><span lang="en">A link works only once. In the app, tap “Resend the email” to get a new one.</span></p>
+              <p class="hint"><span lang="fr">Pensez à regarder dans les courriers indésirables.</span><span lang="en">Remember to check your spam folder.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card" data-view="phone" data-m="drop">
+          <div class="face" data-blow>
+            <div class="ticket-head blue">
+              <div class="kicker"><span lang="fr">SUR VOTRE TÉLÉPHONE</span><span lang="en">ON YOUR PHONE</span></div>
+              <div class="ticket-title"><span lang="fr">Continuez sur votre téléphone.</span><span lang="en">Continue on your phone.</span></div>
+              <div class="stamp" data-m="slam" data-d="700">iPhone · Android</div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Ce lien sert à l’app Travel Buddy, et il a fonctionné. Ouvrez l’app sur le téléphone où elle est installée et connectez-vous avec cette adresse e-mail.</span><span lang="en">This link is for the Travel Buddy app, and it worked. Open the app on the phone where it’s installed and sign in with this email address.</span></p>
+              <p class="hint"><span lang="fr">Un lien ne sert qu’une fois : inutile de le rouvrir.</span><span lang="en">A link works only once: no need to open it again.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card" data-view="recovery" data-m="drop" hidden>
+          <div class="face" data-blow>
+            <div class="ticket-head yellow">
+              <div class="kicker"><span lang="fr">MOT DE PASSE</span><span lang="en">PASSWORD</span></div>
+              <div class="ticket-title"><span lang="fr">Changez votre mot de passe dans l’app.</span><span lang="en">Change your password in the app.</span></div>
+              <div class="stamp" data-m="slam" data-d="700">APP</div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Ce lien ne peut pas aboutir ici. Dans Travel Buddy, sur votre téléphone, touchez « Mot de passe oublié ? » pour recevoir un nouveau lien, et ouvrez-le sur ce téléphone.</span><span lang="en">This link can’t finish here. In Travel Buddy on your phone, tap “Forgot password?” to get a new link, and open it on that phone.</span></p>
+              <p class="hint"><span lang="fr">Pensez à regarder dans les courriers indésirables.</span><span lang="en">Remember to check your spam folder.</span></p>
+            </div>
+          </div>
+        </div>
+        <p class="ticket-help"><span lang="fr">Un souci ? <a href="support.html">Aide</a></span><span lang="en">Trouble? <a href="support.html">Support</a></span></p>
+      </main>
+      <footer class="foot">
+        <span>© 2026 Travel Buddy</span>
+        <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+        <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="fr">Confidentialité</span></a>
+        <a href="terms.html"><span lang="en">Terms of use</span><span lang="fr">Conditions</span></a>
+        <a href="delete-account.html"><span lang="en">Delete my account</span><span lang="fr">Supprimer mon compte</span></a>
+        <a class="mail" href="mailto:travelbuddystudio@gmail.com">travelbuddystudio@gmail.com</a>
+      </footer>
+    </div>
+    <script src="assets/auth.js"></script>
+    <script src="assets/motion.js"></script>
+  </body>
+</html>

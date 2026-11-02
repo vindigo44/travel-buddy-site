@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="no-js" data-lang="en" data-title-en="Travel Buddy" data-title-fr="Travel Buddy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Buddy</title>
+    <meta name="description" content="A trip shared from Travel Buddy: itinerary and budget per day." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/ticket.css" />
+    <link rel="stylesheet" href="assets/trip.css" />
+    <script src="assets/prefs.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./"><img src="assets/icon-256.png" alt="" /><span>Travel Buddy</span></a>
+        <nav class="nav" aria-label="Site">
+          <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+          <a href="privacy.html"><span lang="en">Privacy</span><span lang="fr">Confidentialité</span></a>
+          <a href="terms.html"><span lang="en">Terms</span><span lang="fr">Conditions</span></a>
+        </nav>
+        <div class="switches">
+          <span class="switch switch-lang" role="group" aria-label="Language / Langue">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+          </span>
+          <span class="switch switch-theme" role="group" aria-label="Theme / Thème">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-theme="light" aria-pressed="true"><span lang="en">Light</span><span lang="fr">Clair</span></button>
+            <button type="button" data-set-theme="dark" aria-pressed="false"><span lang="en">Dark</span><span lang="fr">Sombre</span></button>
+          </span>
+        </div>
+      </header>
+
+      <main class="ticket-page">
+        <div class="slab ticket-card" data-view="loading">
+          <div class="face">
+            <div class="ticket-text">
+              <p><span lang="fr">Chargement du voyage…</span><span lang="en">Loading the trip…</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card trip-card" data-view="trip" data-m="drop" hidden>
+          <div class="face" data-blow>
+            <div class="ticket-head yellow">
+              <div class="kicker"><span lang="fr">VOYAGE PARTAGÉ</span><span lang="en">SHARED TRIP</span></div>
+              <div class="ticket-title" id="trip-title"></div>
+              <div class="trip-flags" id="trip-flags" aria-hidden="true"></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <div class="facts" id="trip-facts"></div>
+              <section id="trip-categories-block">
+                <h2 class="trip-h2"><span lang="fr">Où est passé l’argent</span><span lang="en">Where the money went</span></h2>
+                <div id="trip-categories"></div>
+              </section>
+              <section id="trip-itinerary-block">
+                <h2 class="trip-h2"><span lang="fr">Itinéraire</span><span lang="en">Itinerary</span></h2>
+                <div id="trip-itinerary"></div>
+              </section>
+              <div class="ticket-actions">
+                <span class="slab home-btn"><a class="face" data-copy href="#" lang="fr">Copier ce voyage dans Travel Buddy</a><a class="face" data-copy href="#" lang="en">Copy this trip into Travel Buddy</a></span>
+              </div>
+              <p class="hint"><span lang="fr">Il faut l’app Travel Buddy, bientôt sur l’App Store et Google Play. Ni notes de dépenses, ni prénoms, ni photos ne sont publiés.</span><span lang="en">You need the Travel Buddy app, coming soon to the App Store and Google Play. No expense notes, names or photos are published.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card" data-view="missing" hidden>
+          <div class="face">
+            <div class="ticket-head orange">
+              <div class="kicker"><span lang="fr">INTROUVABLE</span><span lang="en">NOT FOUND</span></div>
+              <div class="ticket-title"><span lang="fr">Cette page de voyage n’existe plus.</span><span lang="en">This trip page doesn’t exist any more.</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Son auteur l’a peut-être retirée, ou le lien est incomplet.</span><span lang="en">Its author may have removed it, or the link is incomplete.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card" data-view="failed" hidden>
+          <div class="face">
+            <div class="ticket-head orange">
+              <div class="kicker"><span lang="fr">HORS LIGNE</span><span lang="en">OFFLINE</span></div>
+              <div class="ticket-title"><span lang="fr">Le voyage n’a pas pu être chargé.</span><span lang="en">The trip couldn’t be loaded.</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Vérifiez votre connexion et rechargez la page.</span><span lang="en">Check your connection and reload the page.</span></p>
+            </div>
+          </div>
+        </div>
+        <p class="ticket-help"><span lang="fr">Un souci ? <a href="support.html">Aide</a></span><span lang="en">Trouble? <a href="support.html">Support</a></span></p>
+      </main>
+      <footer class="foot">
+        <span>© 2026 Travel Buddy</span>
+        <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+        <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="fr">Confidentialité</span></a>
+        <a href="terms.html"><span lang="en">Terms of use</span><span lang="fr">Conditions</span></a>
+        <a href="delete-account.html"><span lang="en">Delete my account</span><span lang="fr">Supprimer mon compte</span></a>
+        <a class="mail" href="mailto:travelbuddystudio@gmail.com">travelbuddystudio@gmail.com</a>
+      </footer>
+    </div>
+    <script src="assets/trip.js"></script>
+    <script src="assets/motion.js"></script>
+  </body>
+</html>

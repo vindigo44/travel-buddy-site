@@ -1,0 +1,117 @@
+/* A trip's public page (trip.html): facts, money by category and the itinerary, inside the ticket. */
+.trip-card {
+  max-width: 640px;
+}
+
+.trip-flags {
+  margin-top: 8px;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.fact {
+  padding: 10px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+}
+
+.fact-value {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.fact-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary, inherit);
+}
+
+.trip-h2 {
+  margin: 18px 0 10px;
+  font-size: 18px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 48px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bar-track {
+  height: 12px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--yellow);
+}
+
+.bar-fill.food { background: var(--orange); }
+.bar-fill.transport { background: var(--blue); }
+.bar-fill.accommodation { background: var(--pink); }
+.bar-fill.activities { background: var(--green); }
+
+.bar-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.day {
+  margin: 14px 0 6px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.stop {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 2px dashed var(--ink);
+}
+
+.stop-time {
+  min-width: 44px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.stop-title {
+  font-weight: 700;
+}
+
+.stop-meta {
+  font-size: 13px;
+}
+
+.ticket-text .ticket-actions {
+  margin-top: 22px;
+}
+
+@media (max-width: 420px) {
+  .bar-row {
+    grid-template-columns: 90px 1fr 42px;
+  }
+}
+
+/* A long word (a link pasted as a stop title) wraps instead of running out of the ticket. */
+.trip-card .ticket-title,
+.trip-card .stop-title,
+.trip-card .stop-meta {
+  overflow-wrap: anywhere;
+}

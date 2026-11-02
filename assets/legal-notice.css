@@ -1,0 +1,115 @@
+/* Legal notice (Claude Design, Legal.dc.html): three folder cards — publisher, host, credits. Fields the
+   user still has to fill in are marked yellow. */
+
+.notice {
+  padding: 32px 0 0;
+  max-width: 880px;
+}
+
+.notice h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0 0 14px;
+}
+
+.notice .intro {
+  margin: 0 0 40px;
+  font-size: 19px;
+  color: var(--text-2);
+  max-width: 36em;
+}
+
+.notice-blocks {
+  display: grid;
+  gap: 28px;
+}
+
+.notice-block {
+  position: relative;
+  padding-top: 24px;
+}
+
+.notice-block .tab {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  padding: 4px 14px 14px;
+  color: #171717;
+  border: 2.5px solid var(--ink);
+  border-radius: 9px 9px 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.notice-block dl {
+  position: relative;
+  margin: 0;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: 4px 16px 16px 16px;
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 8px 22px;
+}
+
+.notice-block dl > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--muted);
+}
+
+.notice-block dl > div:last-child {
+  border-bottom: 0;
+}
+
+.notice-block dt {
+  flex: 0 0 200px;
+  color: var(--text-2);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.notice-block dd {
+  flex: 1 1 320px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.notice-block mark {
+  background: var(--yellow);
+  color: #171717;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.aside-note {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border: 2px dashed var(--ink);
+  border-radius: 16px;
+}
+
+.aside-note .info {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #171717;
+  border-radius: 8px;
+  background: var(--yellow);
+  color: #171717;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.aside-note > span:last-child {
+  text-wrap: pretty;
+  color: var(--text-2);
+}

@@ -1,0 +1,213 @@
+/* Delete your account (Claude Design, DeleteAccount.dc.html): the steps in the app, the request by
+   email without it, and what is erased or stays. Google Play links to this page. */
+
+.delete {
+  padding: 32px 0 0;
+  max-width: 880px;
+}
+
+.delete h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0 0 14px;
+}
+
+.delete .intro {
+  margin: 0 0 8px;
+  font-size: 19px;
+  color: var(--text-2);
+  max-width: 36em;
+  text-wrap: pretty;
+}
+
+.delete .publisher {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-2);
+}
+
+.publisher mark {
+  background: var(--yellow);
+  color: var(--on-color);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.delete h2 {
+  font-size: 27px;
+  letter-spacing: -0.025em;
+  margin: 56px 0 18px;
+}
+
+.delete h2.first {
+  margin-top: 52px;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.steps .face {
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.step-n {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: var(--yellow);
+  color: var(--on-color);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.steps strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.steps .face > span:last-child {
+  color: var(--text-2);
+}
+
+.request > .face {
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.request-text {
+  flex: 1 1 380px;
+  display: grid;
+  gap: 8px;
+}
+
+.request-text > span:first-child {
+  text-wrap: pretty;
+}
+
+.request-text .delay {
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.mail-btn {
+  --r: 12px;
+  display: inline-flex;
+}
+
+.mail-btn .face {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 20px;
+  background: var(--yellow);
+  color: var(--on-color);
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms var(--travel);
+}
+
+.mail-btn .face:hover {
+  transform: translate(-2px, -2px);
+  color: var(--on-color);
+}
+
+.mail-btn .face:active {
+  transform: translate(4px, 4px);
+}
+
+.outcome {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 24px;
+}
+
+.outcome > div {
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card);
+}
+
+.outcome h3 {
+  margin: 0;
+  padding: 12px 20px;
+  color: #171717;
+  border-bottom: 2px solid var(--ink);
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.outcome ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.outcome li {
+  padding: 14px 20px;
+  border-top: 1px solid var(--muted);
+  display: grid;
+  gap: 2px;
+}
+
+.outcome strong {
+  font-size: 16px;
+}
+
+.outcome li > span {
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.separately {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border: 2px dashed var(--ink);
+  border-radius: 16px;
+}
+
+.separately .bang {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #171717;
+  border-radius: 8px;
+  background: var(--orange);
+  color: #171717;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.separately > span:last-child {
+  text-wrap: pretty;
+}
+
+.delete .more {
+  margin: 24px 0 0;
+  color: var(--text-2);
+  font-size: 15px;
+}

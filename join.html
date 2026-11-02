@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="no-js" data-lang="en" data-title-en="Travel Buddy" data-title-fr="Travel Buddy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Buddy</title>
+    <meta name="description" content="Travel Buddy: join a shared trip." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/ticket.css" />
+    <script src="assets/prefs.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./"><img src="assets/icon-256.png" alt="" /><span>Travel Buddy</span></a>
+        <nav class="nav" aria-label="Site">
+          <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+          <a href="privacy.html"><span lang="en">Privacy</span><span lang="fr">Confidentialité</span></a>
+          <a href="terms.html"><span lang="en">Terms</span><span lang="fr">Conditions</span></a>
+        </nav>
+        <div class="switches">
+          <span class="switch switch-lang" role="group" aria-label="Language / Langue">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+          </span>
+          <span class="switch switch-theme" role="group" aria-label="Theme / Thème">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-theme="light" aria-pressed="true"><span lang="en">Light</span><span lang="fr">Clair</span></button>
+            <button type="button" data-set-theme="dark" aria-pressed="false"><span lang="en">Dark</span><span lang="fr">Sombre</span></button>
+          </span>
+        </div>
+      </header>
+
+      <main class="ticket-page">
+        <div class="slab ticket-card" data-m="drop">
+          <div class="face" data-blow>
+            <div class="ticket-head blue">
+              <div class="kicker"><span lang="fr">INVITATION</span><span lang="en">INVITATION</span></div>
+              <div class="ticket-title"><span lang="fr">Rejoignez le voyage sur Travel Buddy.</span><span lang="en">Join the trip on Travel Buddy.</span></div>
+              <div class="stamp" data-m="slam" data-d="700"><span lang="fr">À BORD</span><span lang="en">ON BOARD</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">On vous a invité à un voyage partagé : chacun note ses dépenses sur son téléphone, et le voyage montre qui doit quoi. Il faut l’app Travel Buddy et un compte gratuit.</span><span lang="en">You’re invited to a shared trip: each traveller logs expenses on their own phone, and the trip shows who owes what. You need the Travel Buddy app and a free account.</span></p>
+              <div class="ticket-actions">
+                <span class="slab home-btn"><a class="face" id="open-app" href="travelbuddy://join" lang="fr">Ouvrir dans l’app</a><a class="face" id="open-app-en" href="travelbuddy://join" lang="en">Open in the app</a></span>
+              </div>
+              <p class="hint" id="code-line" hidden><span lang="fr">Code d’invitation : </span><span lang="en">Invitation code: </span><strong id="code"></strong></p>
+              <p class="hint" id="bad-code" hidden><span lang="fr">Ce lien est incomplet : demandez une nouvelle invitation.</span><span lang="en">This link is incomplete: ask for a new invitation.</span></p>
+              <p class="hint"><span lang="fr">Pas encore l’app ? Bientôt sur l’App Store et Google Play.</span><span lang="en">No app yet? Coming soon to the App Store and Google Play.</span></p>
+            </div>
+          </div>
+        </div>
+        <p class="ticket-help"><span lang="fr">Un souci ? <a href="support.html">Aide</a></span><span lang="en">Trouble? <a href="support.html">Support</a></span></p>
+      </main>
+      <footer class="foot">
+        <span>© 2026 Travel Buddy</span>
+        <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+        <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="fr">Confidentialité</span></a>
+        <a href="terms.html"><span lang="en">Terms of use</span><span lang="fr">Conditions</span></a>
+        <a href="delete-account.html"><span lang="en">Delete my account</span><span lang="fr">Supprimer mon compte</span></a>
+        <a class="mail" href="mailto:travelbuddystudio@gmail.com">travelbuddystudio@gmail.com</a>
+      </footer>
+    </div>
+    <script src="assets/join.js"></script>
+    <script src="assets/motion.js"></script>
+  </body>
+</html>
