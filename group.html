@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" class="no-js" data-lang="en" data-title-en="Travel Buddy" data-title-fr="Travel Buddy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Buddy</title>
+    <meta name="description" content="A shared Travel Buddy trip: who owes what, the expenses, and adding one, without the app." />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/ticket.css" />
+    <link rel="stylesheet" href="assets/trip.css" />
+    <link rel="stylesheet" href="assets/group.css" />
+    <script src="assets/prefs.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./"><img src="assets/icon-256.png" alt="" /><span>Travel Buddy</span></a>
+        <nav class="nav" aria-label="Site">
+          <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+          <a href="privacy.html"><span lang="en">Privacy</span><span lang="fr">Confidentialité</span></a>
+          <a href="terms.html"><span lang="en">Terms</span><span lang="fr">Conditions</span></a>
+        </nav>
+        <div class="switches">
+          <span class="switch switch-lang" role="group" aria-label="Language / Langue">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+          </span>
+          <span class="switch switch-theme" role="group" aria-label="Theme / Thème">
+            <span class="thumb" aria-hidden="true"></span>
+            <button type="button" data-set-theme="light" aria-pressed="true"><span lang="en">Light</span><span lang="fr">Clair</span></button>
+            <button type="button" data-set-theme="dark" aria-pressed="false"><span lang="en">Dark</span><span lang="fr">Sombre</span></button>
+          </span>
+        </div>
+      </header>
+
+      <main class="ticket-page">
+        <div class="slab ticket-card" data-view="loading">
+          <div class="face">
+            <div class="ticket-text">
+              <p><span lang="fr">Chargement du voyage…</span><span lang="en">Loading the trip…</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slab ticket-card trip-card" data-view="trip" hidden>
+          <div class="face">
+            <div class="ticket-head blue">
+              <div class="kicker"><span lang="fr">VOYAGE PARTAGÉ</span><span lang="en">SHARED TRIP</span></div>
+              <div class="ticket-title" id="group-title"></div>
+              <div class="trip-flags" id="group-flags" aria-hidden="true"></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <section>
+                <h2 class="trip-h2"><span lang="fr">Vous êtes…</span><span lang="en">You are…</span></h2>
+                <div class="chips" id="group-me" role="radiogroup" aria-label="You are / Vous êtes"></div>
+              </section>
+
+              <section>
+                <h2 class="trip-h2"><span lang="fr">Qui doit quoi</span><span lang="en">Who owes what</span></h2>
+                <div class="rows" id="group-balances"></div>
+                <div class="transfers" id="group-transfers"></div>
+              </section>
+
+              <section>
+                <h2 class="trip-h2"><span lang="fr">Ajouter une dépense</span><span lang="en">Add an expense</span></h2>
+                <form id="group-form" class="group-form" novalidate>
+                  <div class="field-row">
+                    <label class="field grow">
+                      <span class="field-label"><span lang="fr">Montant</span><span lang="en">Amount</span></span>
+                      <input id="f-amount" inputmode="decimal" autocomplete="off" required />
+                    </label>
+                    <label class="field narrow">
+                      <span class="field-label"><span lang="fr">Devise</span><span lang="en">Currency</span></span>
+                      <input id="f-currency" maxlength="3" autocomplete="off" />
+                    </label>
+                  </div>
+                  <label class="field" id="f-rate-field" hidden>
+                    <span class="field-label" id="f-rate-label"></span>
+                    <input id="f-rate" inputmode="decimal" autocomplete="off" />
+                  </label>
+                  <label class="field">
+                    <span class="field-label"><span lang="fr">C’était quoi ?</span><span lang="en">What was it?</span></span>
+                    <input id="f-note" maxlength="200" autocomplete="off" />
+                  </label>
+                  <div class="field-row">
+                    <label class="field grow">
+                      <span class="field-label"><span lang="fr">Catégorie</span><span lang="en">Category</span></span>
+                      <select id="f-category"></select>
+                    </label>
+                    <label class="field grow">
+                      <span class="field-label"><span lang="fr">Date</span><span lang="en">Date</span></span>
+                      <input id="f-date" type="date" />
+                    </label>
+                  </div>
+                  <div class="field">
+                    <span class="field-label"><span lang="fr">Payé par</span><span lang="en">Paid by</span></span>
+                    <div class="chips" id="f-payer" role="radiogroup"></div>
+                  </div>
+                  <div class="field">
+                    <span class="field-label"><span lang="fr">Pour</span><span lang="en">For</span></span>
+                    <div class="chips" id="f-for"></div>
+                  </div>
+                  <p class="form-error" id="f-error" role="alert" hidden></p>
+                  <div class="ticket-actions">
+                    <span class="slab home-btn"><button class="face" type="submit"><span lang="fr">Ajouter</span><span lang="en">Add</span></button></span>
+                  </div>
+                </form>
+              </section>
+
+              <section>
+                <h2 class="trip-h2"><span lang="fr">Dépenses</span><span lang="en">Expenses</span></h2>
+                <div class="rows" id="group-expenses"></div>
+              </section>
+
+              <p class="hint"><span lang="fr">Ce lien donne accès au voyage à toute personne qui l’a : ne le partagez qu’avec vos compagnons de voyage. Le créateur peut le désactiver dans l’app. Avec l’app Travel Buddy, vous auriez aussi le budget du jour, les devises hors ligne et le liquide.</span><span lang="en">Anyone with this link can see and add to the trip: only share it with your travel companions. Its creator can switch it off in the app. With the Travel Buddy app you’d also get today’s budget, offline currencies and cash.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slab ticket-card" data-view="missing" hidden>
+          <div class="face">
+            <div class="ticket-head orange">
+              <div class="kicker"><span lang="fr">LIEN INVALIDE</span><span lang="en">INVALID LINK</span></div>
+              <div class="ticket-title"><span lang="fr">Ce lien ne fonctionne plus.</span><span lang="en">This link doesn’t work any more.</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Il a peut-être été désactivé, ou il est incomplet. Demandez-en un nouveau à la personne qui vous l’a envoyé.</span><span lang="en">It may have been switched off, or it’s incomplete. Ask whoever sent it for a new one.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="slab ticket-card" data-view="failed" hidden>
+          <div class="face">
+            <div class="ticket-head orange">
+              <div class="kicker"><span lang="fr">HORS LIGNE</span><span lang="en">OFFLINE</span></div>
+              <div class="ticket-title"><span lang="fr">Le voyage n’a pas pu être chargé.</span><span lang="en">The trip couldn’t be loaded.</span></div>
+            </div>
+            <div class="perf"><div class="notch notch-l"></div><div class="notch notch-r"></div></div>
+            <div class="ticket-text">
+              <p><span lang="fr">Vérifiez votre connexion et rechargez la page.</span><span lang="en">Check your connection and reload the page.</span></p>
+            </div>
+          </div>
+        </div>
+        <p class="ticket-help"><span lang="fr">Un souci ? <a href="support.html">Aide</a></span><span lang="en">Trouble? <a href="support.html">Support</a></span></p>
+      </main>
+      <footer class="foot">
+        <span>© 2026 Travel Buddy</span>
+        <a href="support.html"><span lang="en">Support</span><span lang="fr">Aide</span></a>
+        <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="fr">Confidentialité</span></a>
+        <a href="terms.html"><span lang="en">Terms of use</span><span lang="fr">Conditions</span></a>
+        <a class="mail" href="mailto:travelbuddystudio@gmail.com">travelbuddystudio@gmail.com</a>
+      </footer>
+    </div>
+    <script src="assets/group-split.js"></script>
+    <script src="assets/group.js"></script>
+  </body>
+</html>
